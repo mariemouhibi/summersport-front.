@@ -1,0 +1,33 @@
+
+
+<app-banner title="Teams"> </app-banner>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+<table class="table">
+
+    <tr>
+        <th> ID</th>
+        <th> Name</th>
+        <th>Owner</th>
+        <th> Fondation</th>
+        <th> Stadium</th>
+        <th> Actions</th>
+    </tr>
+    <tr *ngFor="let m of teams">
+        <td> {{m.id}}</td>
+        <td> {{m.name}}</td>
+        <td> {{m.owner}}</td>
+        <td> {{m.fondation}}</td>
+        <td> {{m.stadium}}</td>
+        <td>
+            <button class="btn btn-danger"> Delete</button>
+            <button class="btn btn-info"> Dislay </button>
+            <button class="btn btn-waring"  (click)="goToEdit(m.id)"> Edit</button>
+
+
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,110 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white"> Signup </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form [formGroup]="signupForm">
+            <div class="form-group"> 
+              <input type="text" class="form-control" formControlName="FirstName" placeholder="First Name">
+
+
+
+             <span class="text-danger" *ngIf="
+             signupForm.controls['FirstName'].invalid &&
+             (signupForm.controls['FirstName'].touched||
+             signupForm.controls['FirstName'].dirty)
+             "
+             >
+             <span *ngIf="signupForm.controls['FirstName'].errors?.required">required:</span>
+             <span *ngIf="signupForm.controls['FirstName'].errors?.minlength">minlen:</span>
+            </span>
+
+
+
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="LastName" placeholder="Last Name">
+              
+              
+              
+                <span class="text-danger" *ngIf="
+             signupForm.controls['LastName'].invalid &&
+             (signupForm.controls['LastName'].touched||
+             signupForm.controls['LastName'].dirty)
+             "
+             >
+             <span *ngIf="signupForm.controls['FirstName'].errors?.required">required:</span>
+             <span *ngIf="signupForm.controls['FirstName'].errors?.minlength">minlen:</span>
+            </span>
+
+
+
+              </div>
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="Email" placeholder="Email">
+             
+             
+              <span class="text-danger" *ngIf="
+             signupForm.controls['Email'].invalid &&
+             (signupForm.controls['Email'].touched||
+             signupForm.controls['Email'].dirty)
+             "
+             >
+             <span *ngIf="signupForm.controls['Email'].errors?.required">required:</span>
+             <span *ngIf="signupForm.controls['Email'].errors?.email">email:</span>
+            </span>
+
+
+
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" formControlName="Password" placeholder="Password">
+
+              <span class="text-danger" *ngIf="
+              signupForm.controls['Password'].invalid &&
+              (signupForm.controls['Password'].touched||
+              signupForm.controls['Password'].dirty)
+              "
+              >
+              <span *ngIf="signupForm.controls['Password'].errors?.required">required:</span>
+              <span *ngIf="signupForm.controls['Password'].errors?.minlength">minlen:</span>
+             </span>
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" formControlName="ConfirmationPassword" placeholder="Confirmation Password">
+              
+                <span class="text-danger" *ngIf="
+              signupForm.controls['ConfirmationPassword'].invalid &&
+              (signupForm.controls['ConfirmationPassword'].touched||
+              signupForm.controls['ConfirmationPassword'].dirty)
+              "
+              >
+              <span *ngIf="signupForm.controls['ConfirmationPassword'].errors?.required">required:</span>
+              <span *ngIf="signupForm.controls['ConfirmationPassword'].errors?.minlength">minlen:</span>
+             </span>
+              
+              
+              
+              
+              </div>
+
+            <div class="form-group">
+              <input type="button" class="btn btn-primary py-3 px-5"[disabled]="signupForm" value="Sign up" (click)="signup(signupForm.value)">
+            </div>
+          </form>  
+        </div>
+        
+      </div>
+    </div>
+  </div>

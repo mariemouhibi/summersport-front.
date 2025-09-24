@@ -1,0 +1,33 @@
+
+
+<app-banner title="Players"> </app-banner>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+<table class="table">
+
+    <tr>
+        <th> ID</th>
+        <th> Name</th>
+        <th> Phone</th>
+        <th> Age</th>
+        <th> Position</th>
+        <th> Actions</th>
+    </tr>
+    <tr *ngFor="let m of players">
+        <td> {{m.id}}</td>
+        <td> {{m.name}}</td>
+        <td> {{m.phone}}</td>
+        <td> {{m.age}}</td>
+        <td> {{m.position}}</td>
+        <td>
+            <button class="btn btn-danger"> Delete</button>
+            <button class="btn btn-info"> Dislay </button>
+            <button class="btn btn-waring"  (click)="goToEdit(m.id)"> Edit</button>
+
+
+        </td>
+    </tr>
+</table>

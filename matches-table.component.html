@@ -1,0 +1,25 @@
+<table class="table">
+
+    <tr>
+        <th> ID</th>
+        <th> teamOne</th>
+        <th>teamTwo</th>
+        <th> scoreOne</th>
+        <th> scoreTwo</th>
+        <th> Actions</th>
+    </tr>
+    <tr *ngFor="let m of matchestab">
+        <td> {{m.id}}</td>
+        <td> {{m.teamOne}}</td>
+        <td> {{m.teamTwo}}</td>
+        <td> {{m.scoreOne}}</td>
+        <td> {{m.scoreTwo}}</td>
+        <td>
+            <button class="btn btn-danger" (click)="deleteMatch(m.id)">Delete</button>
+            <button class="btn btn-info"> Dislay </button>
+            <button class="btn btn-waring"  (click)="goToEdit(m.id)"> Edit</button>
+
+
+        </td>
+    </tr>
+</table>

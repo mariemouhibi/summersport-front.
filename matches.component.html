@@ -1,0 +1,19 @@
+<div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" >
+
+          <div class="form-group" >
+            <input type="text" class="form-control" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="teamOne">
+        </div>
+        <div class="=col-lg-12" *ngFor="let m of matches | myFilter :term">
+          <app-match [match]="m">  (newMatch)="deleteMatch($event)"></app-match> 
+                          
+          
+          
+
+ </div>
+        </div>
+        
+      </div>
+    </div>

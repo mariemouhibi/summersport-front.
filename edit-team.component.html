@@ -1,0 +1,40 @@
+
+
+
+<app-banner title="Edit Team"></app-banner>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+
+
+
+
+<form #addteamForm="ngForm" (ngSubmit)="editteam()">
+
+    <div class="form-group" >
+        <input type="text" class="form-control" [(ngModel)]="findedteam.name" [ngModelOptions]="{standalone: true}" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]=" findedteam.owner" [ngModelOptions]="{standalone: true}" placeholder="Owner" >
+            
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="findedteam.fondation"[ngModelOptions]="{standalone: true}" placeholder="Fondation">
+          
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="findedplayer.stadium" [ngModelOptions]="{standalone: true}" placeholder="Staduim">
+    
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary py-3 px-5">Edit Team </button>
+    </div>
+</form>
+
+</div>
+</div>
+</div>
+</div>

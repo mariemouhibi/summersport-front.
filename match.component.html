@@ -1,0 +1,37 @@
+<div class="d-flex team-vs mt-5">
+  <button class="btn btn-danger " (click)="passId(match.id)" > delete </button>
+    <span class="score"> <span [ngStyle]="{color:compare(match?.scoreOne,match?.scoreTwo)[1]}">{{match?.scoreOne}}</span>-<span [ngStyle]="{color:compare(match?.scoreTwo,match?.scoreOne)[1]}">{{match?.scoreTwo}}</span> </span>
+    <div class="team-1 w-50">
+      <div class="team-details w-100 text-center">
+        <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
+        <h3>  <span  [ngClass]="{
+            'class-win':compare(match?.scoreTwo,match?.scoreOne)[0]=='win',
+            'class-Loss':compare(match?.scoreTwo,match?.scoreOne)[0]=='Loss',
+            'class-Draw':compare(match?.scoreTwo,match?.scoreOne)[0]=='Draw'
+          
+        }"> {{match?.teamOne}} </span> <span>({{compare(match?.scoreOne,match?.scoreTwo)[0]}})</span></h3>
+        <ul class="list-unstyled">
+          <li>Anja Landry (7)</li>
+          <li>Eadie Salinas (12)</li>
+          <li>Ashton Allen (10)</li>
+          <li>Baxter Metcalfe (5)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-2 w-50">
+      <div class="team-details w-100 text-center">
+        <img src="assets/images/logo_2.png" alt="Image" class="img-fluid">
+        <h3> <span [ngClass]="{
+          'class-win':compare(match?.scoreTwo,match?.scoreOne)[0]=='win',
+          'class-Loss':compare(match?.scoreTwo,match?.scoreOne)[0]=='Loss',
+          'class-Draw':compare(match?.scoreTwo,match?.scoreOne)[0]=='Draw'
+        }">{{match?.teamTwo}}</span> <span>({{compare(match?.scoreTwo,match?.scoreOne)[0]}})</span></h3>
+        <ul class="list-unstyled">
+          <li>Macauly Green (3)</li>
+          <li>Arham Stark (8)</li>
+          <li>Stephan Murillo (9)</li>
+          <li>Ned Ritter (5)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
